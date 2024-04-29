@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :beacon_demo, BeaconDemo.Repo,
   username: "postgres",
-  password: "postgres",
+  password: System.get_env("ARPAGEO_DB_PASSWORD"),
   hostname: "localhost",
   database: "beacon_demo_dev",
   stacktrace: true,
@@ -12,7 +12,7 @@ config :beacon_demo, BeaconDemo.Repo,
 
 config :beacon, Beacon.Repo,
   username: "postgres",
-  password: "postgres",
+  password: System.get_env("ARPAGEO_DB_PASSWORD"),
   hostname: "localhost",
   database: "beacon_demo_dev",
   stacktrace: true,
